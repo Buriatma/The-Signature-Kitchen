@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from template.themeton.com/rozario/contacts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Sep 2020 17:09:11 GMT -->
 
 <head>
     <meta charset="utf-8">
@@ -153,9 +152,32 @@
 
                         &nbsp;
 
-                        <p>
-                            <button class="button small fill black with-icon"><i class="fa fa-phone"></i>123</button>
-                        </p>
+                        <div class="dropdown">
+                            <p>
+                                <button onclick="button()" class="dropbtn">📞 Call Us</button>
+                            <div id="mydropdown" class="dropdown-number">
+                                <a href="#number">1234567890</a>
+                                </p>
+                            </div>
+                        </div>
+                        <script>function button() {
+                                document.getElementById("mydropdown").classList.toggle("show");
+                            }
+
+                            // Close the dropdown if the user clicks outside of it
+                            window.onclick = function (event) {
+                                if (!event.target.matches('.dropbtn')) {
+                                    var dropdowns = document.getElementsByClassName("dropdown-number");
+                                    var i;
+                                    for (i = 0; i < dropdowns.length; i++) {
+                                        var openDropdown = dropdowns[i];
+                                        if (openDropdown.classList.contains('show')) {
+                                            openDropdown.classList.remove('show');
+                                        }
+                                    }
+                                }
+                            }
+                        </script>
 
                         <p>
                             <a href="menu.html"><button class="button full fill rectangle">View Full Menu</button></a>
@@ -329,6 +351,5 @@
 
 </body>
 
-<!-- Mirrored from template.themeton.com/rozario/contacts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Sep 2020 17:09:15 GMT -->
 
 </html>
