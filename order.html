@@ -152,32 +152,11 @@
 
                         &nbsp;
 
-                        <div class="dropdown">
-                            <p>
-                                <button onclick="button()" class="dropbtn">📞 Call Us</button>
-                            <div id="mydropdown" class="dropdown-number">
-                                <a href="#number">1234567890</a>
-                                </p>
-                            </div>
-                        </div>
-                        <script>function button() {
-                                document.getElementById("mydropdown").classList.toggle("show");
-                            }
-
-                            // Close the dropdown if the user clicks outside of it
-                            window.onclick = function (event) {
-                                if (!event.target.matches('.dropbtn')) {
-                                    var dropdowns = document.getElementsByClassName("dropdown-number");
-                                    var i;
-                                    for (i = 0; i < dropdowns.length; i++) {
-                                        var openDropdown = dropdowns[i];
-                                        if (openDropdown.classList.contains('show')) {
-                                            openDropdown.classList.remove('show');
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        <p>
+                            <a href="tel:+91 76664 50443" class="button small fill black with-icon">
+                                <i class="fa fa-phone"></i> Call Us
+                            </a>
+                        </p>
 
                         <p>
                             <a href="menu.html"><button class="button full fill rectangle">View Full Menu</button></a>
